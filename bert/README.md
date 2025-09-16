@@ -12,7 +12,7 @@
 ---
 
 ## 폴더 구조
-
+```
 ├── main.py # 메인 실행 스크립트
 ├── sector.py # 섹터 분류 모듈
 ├── bert.py # 감성 분석 및 집계 모듈
@@ -24,6 +24,7 @@
 │ ├── news_sector_mapping.csv # 뉴스 → 섹터 분류 결과
 │ ├── news_sentiment.csv # 기사별 감성 분석 결과
 │ └── sector_sentiment_statistic.csv # 섹터별 감성 집계 결과
+```
 
 ---
 
@@ -46,7 +47,7 @@ pip install -r requirements.txt
 1. **뉴스 데이터 준비**      
     뉴스 파일은 `../naver_api_news_full_crawling/out/*_금융.csv` 경로에 위치해야 합니다.
 
-    필수 컬럼: `body_full` (기사 본문), `published_at_kst` (발행일시)
+    필수 컬럼 : `body_full` (기사 본문), `published_at_kst` (발행일시)
 
 2. **실행**
     ```bash
@@ -54,6 +55,7 @@ pip install -r requirements.txt
     ```
 
 3. **처리 단계**
+
     섹터 분류 (sector.py)
     → `out/news_sector_mapping.csv` 생성
 
@@ -65,19 +67,25 @@ pip install -r requirements.txt
 
 ### 4. 결과 예시
 1. **섹터 분류 결과**
+```
 | body\_full | published\_at\_kst | 섹터   |
 | ---------- | ------------------ | ---- |
 | 예시 기사 본문   | 2025-09-16 08:00   | 정보기술 |
+```
 
 2. **감성 분석 결과**
+```
 | date       | 섹터 | label | score |
 | ---------- | -- | -------- | ----- |
 | 2025-09-16 | 금융 | positive    | 0.87  |
+```
 
 3. **섹터 감성 집계**
+```
 | date       | 섹터 | positive\_score | negative\_score | neutral\_score | positive\_percent | negative\_percent | neutral\_percent |
 | ---------- | -- | --------- | --------- | --------- | ----------- | ----------- | ----------- |
 | 2025-09-16 | 금융 | 0.76      | 0.12      | 0.12      | 70.0        | 15.0        | 15.0        |
+```
 
 ## 참고
 감성 분석 모델 : snunlp/KR-FinBert-SC
