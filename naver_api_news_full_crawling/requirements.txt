@@ -1,0 +1,7 @@
+requests
+beautifulsoup4
+lxml
+trafilatura
+readability-lxml
+pandas
+pyarrow
