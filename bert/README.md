@@ -20,7 +20,6 @@
 │ └── bert.py # 감성 분석 및 집계 모듈
 ├── requirements.txt # 패키지 종속성 목록
 ├── .gitignore # Git 제외 설정
-│
 ├── out/
 │ ├── news_sector_mapping.csv # 뉴스 → 섹터 분류 결과
 │ ├── news_sentiment.csv # 기사별 감성 분석 결과
@@ -68,20 +67,21 @@ pip install -r requirements.txt
 
 ### 4. 결과 예시
 1. **섹터 분류 결과**
-| body\_full | published\_at\_kst | 섹터   |
-| ---------- | ------------------ | ---- |
-| 예시 기사 본문   | 2025-09-16 08:00   | 정보기술 |
+| body_full     | published_at_kst | 섹터   |
+|---------------|------------------|--------|
+| 예시 기사 본문 | 2025-09-16 08:00 | 정보기술 |
 
 2. **감성 분석 결과**
-| date       | 섹터 | label | score |
-| ---------- | -- | -------- | ----- |
-| 2025-09-16 | 금융 | positive    | 0.87  |
+| date       | 섹터 | label    | score |
+|------------|------|----------|-------|
+| 2025-09-16 | 금융 | positive | 0.87  |
 
 3. **섹터 감성 집계**
-| date       | 섹터 | positive\_score | negative\_score | neutral\_score | positive\_percent | negative\_percent | neutral\_percent |
-| ---------- | -- | --------- | --------- | --------- | ----------- | ----------- | ----------- |
-| 2025-09-16 | 금융 | 0.76      | 0.12      | 0.12      | 70.0        | 15.0        | 15.0        |
+| date       | 섹터 | positive_score | negative_score | neutral_score | positive_percent | negative_percent | neutral_percent |
+|------------|------|----------------|----------------|---------------|------------------|------------------|-----------------|
+| 2025-09-16 | 금융 | 0.76           | 0.12           | 0.12          | 70.0             | 15.0             | 15.0            |
 
 ## 참고
 감성 분석 모델 : snunlp/KR-FinBert-SC
+
 섹터 기준 : [GICS 11 Sector]
