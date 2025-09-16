@@ -1,0 +1,10 @@
+pandas==2.2.3
+numpy==1.26.4
+
+torch==2.5.1
+transformers==4.48.2
+tokenizers==0.21.0
+huggingface-hub==0.28.1
+
+scikit-learn==1.5.2
+tqdm==4.67.1
