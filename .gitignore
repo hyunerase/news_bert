@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual Environment
+venv_naver/
+venv/
+.venv/
+
+# Secrets (API 키 등 민감 정보)
+.env
+
+# Output files (크롤링 결과)
+out/
+
+# IDE settings
+.vscode/
