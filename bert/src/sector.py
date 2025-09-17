@@ -1,6 +1,8 @@
 import pandas as pd
 import re
 
+## 섹터 2차 분류
+
 # 섹터-키워드 딕셔너리 반환
 def load_sector_dict(keyword_csv_path: str) -> dict:
     df = pd.read_csv(keyword_csv_path)

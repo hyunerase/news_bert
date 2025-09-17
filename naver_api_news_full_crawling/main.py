@@ -30,7 +30,7 @@ def save_to_parquet(records: list, path: str):
 def main():
     """ 메인 실행 함수 """
     # ---- 수집 설정 ----
-    QUERY = "금융"
+    QUERY = "부동산" ## 섹터 1차 분류
     MAX_ITEMS = 1000
     RECENT_DAYS_LIMIT = 30
     SORT_ORDER = "date" # 최신순(date) 또는 관련도순(sim)
